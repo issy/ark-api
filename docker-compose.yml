@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  ark-worker:
+    build: ./worker
+    env_file:
+      - ./worker.env
+  ark-api:
+    build: ./api
+    restart: unless-stopped
